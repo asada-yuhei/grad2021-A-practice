@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title="卒業判定"></title>
+        <link rel = "stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <h1>これは練習です</h1>
+        <div>
+            <label><input type ="checkbox" id="check1">聖書を学ぶ</label>
+        </div>
+        <div>
+            <input type="button" value="計算" id="count">
+        </div>
+        <p>最新情報はこちらを確認してください</p>
+        <a href="https://www.tohoku-gakuin.ac.jp/syllabus/">東北学院大学シラバス</a>
+        <script>
+            let gradcount = 0;
+            let checkbox1 = document.getElementById('check1');
+            let count = document.getElementById('count');
+            count.addEventListener('click', buttonclick);
+            
+            function buttonclick(){
+                if(checkbox1.checked){
+                    gradcount += 2;
+                }
+                console.log(gradcount);
+                gradcount = 0;
+            }
+        </script>
+    </body>
+    
+</html>
